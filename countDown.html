@@ -85,15 +85,16 @@
           </div>
         </body>
         <script>
-        const year = new Date().getFullYear();
-        const myDate = new Date('Jan 21, 2023 00:00:00');
-        console.log(myDate);
+        // const year = new Date().getFullYear();
+        // 结束时间：中国春节的公历年
+        const endTime = new Date('2023/01/22 00:00:00').getTime();
+        // console.log(myDate);
         // countdown
         let timer = setInterval(function() {
         // get today's date
-        const today = new Date().getTime();
+        const currentTime = new Date().getTime();
         // get the difference
-        const diff = myDate - today;
+        const diff = endTime - currentTime;
         // math
         let days = Math.floor(diff / (1000 * 60 * 60 * 24));
         let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
